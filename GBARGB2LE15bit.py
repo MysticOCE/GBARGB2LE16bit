@@ -20,7 +20,7 @@ while (lines):
 	gbin = format(int(G),'05b')
 	bbin = format(int(B),'06b')
 	print(rbin,gbin,bbin)
-	#concatenates the binary color strings together
+	#concatenates the binary color strings together to BGR
 	color = bbin + gbin + rbin
 	#converts current color string to an int
 	color2 = int(color,2)

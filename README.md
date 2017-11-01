@@ -7,6 +7,11 @@ The format of the input is any number of colors in format RRGGBB where RR/GG/BB 
 
 Standard RGB uses 8 bits per color so that you can have values from 0 to 255. 16 bit color uses 5 bits for the RR/GG/BB values so the format per color is xRRRRRGGGGGBBBBB wheree the x is a dead bit. This means that you can only have 32 possible values for each color and 32 to the 3 (32768) different color combo's (I think). The perk of this is that you save a byte per color, only needing 16 bits for a color vs standard RGB's 24.
 
+This was built for GBA colors (specifically FE colors) so it actually outputs BGR. If you wanted to swap that to RGB, just change line 24 of the program to "color = rbin + gbin + bbin".
+
+RGB - standard format used to display digital color. 
+LE - Little endian. Simply put, it's for when we read things from the least significant byte first rather than the most significant byte like you would assume it works.
+
 ## Explanation of input format
 
 Put all your input on the first line of like in testing.txt. Ensure that you have 6 characters per color.
